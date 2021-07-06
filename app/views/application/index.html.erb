@@ -1,7 +1,7 @@
-<h1>Homepage</h1>
 <% if !logged_in? %>
     <%= link_to "Login", login_path %></p>
     <% else %>
+    <h1>Homepage</h1>
     Welcome, <%= current_user.name %> <br><br>
     <%= link_to "Logout", logout_path, method: :delete %></p>
 <% end %>
