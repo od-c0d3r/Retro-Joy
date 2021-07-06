@@ -2,5 +2,6 @@
 <% if !logged_in? %>
     <%= link_to "Login", login_path %></p>
     <% else %>
-    Welcome, <%= current_user.name %>
+    Welcome, <%= current_user.name %> <br><br>
+    <%= link_to "Logout", logout_path, method: :delete %></p>
 <% end %>
