@@ -1,9 +1,11 @@
 Rails.application.routes.draw do
+  get 'categories/show'
   root   'application#main'
-  
-  resources :votes, only: [:create, :destory]
-  resources :articles
+
   resources :users
+  resources :articles
+  resources :votes,    only: [:create, :destory]
+  resources :category, only: [:show]
   
   get    '/login',   to: 'sessions#new'
   post   '/login',   to: 'sessions#create'

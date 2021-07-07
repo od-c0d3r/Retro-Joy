@@ -3,13 +3,17 @@
           <%= image_tag "logo-trans.png", class: 'mb4 logo nav-logo' %>
           <nav>
             <ul class="nav navbar-nav navbar-right flex-row">
-              <li><%= link_to "HOME",   '#', class: 'p-3' %></li>
-              <li><%= link_to "CAT1",   '#', class: 'p-3' %></li>
-              <li><%= link_to "CAT2", '#', class: 'p-3' %></li>
-              <li><%= link_to "CAT3",   '#', class: 'p-3' %></li>
+              <li><%= link_to "HOME",  root_path, class: 'p-3' %></li>
+              <li><%= link_to "BUSINESS",  categories_show_path(id:1), class: 'p-3' %></li>
+              <li><%= link_to "SPORTS",  categories_show_path(id:2), class: 'p-3' %></li>
+              <li><%= link_to "FASHION",  categories_show_path(id:3), class: 'p-3' %></li>
+            </ul>
+          </nav>
+          <nav>
+            <ul class="nav navbar-nav navbar-right flex-row">
               <li><%= link_to "Wrtie an Article", new_article_path , class: 'p-3' %></li>
             </ul>
-            </nav>
+          </nav>
         </div>
       </header>
       

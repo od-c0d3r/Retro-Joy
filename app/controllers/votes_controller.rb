@@ -5,7 +5,7 @@ class VotesController < ApplicationController
     if vote.save
       redirect_to root_path
     else 
-      flash[:danger] = "Something went wrong!"
+      flash.now[:danger] = "Something went wrong!"
     end
   end
 
