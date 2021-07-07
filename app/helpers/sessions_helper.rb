@@ -9,6 +9,14 @@ module SessionsHelper
         end
     end
 
+    def current_user
+        if (user_username = session[:username])
+          user = User.find_by(username: user_username)
+          if user
+            @current_user = user
+        end
+    end
+
     def logged_in?
         !current_user.nil?
     end
