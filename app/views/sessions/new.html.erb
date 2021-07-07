@@ -6,8 +6,8 @@
                   <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
                   <%= f.text_field :username, class: "form-control", placeholder:"Username"%> <br><br>
                 </div>
-          <%= f.submit "Log in", class: "button1 btn-border-2" %>
-          <% # <p>New user? <%= link_to "Sign up now!", signup_path %(-)></p>  %>
+          <%= f.submit "Log in", class: "button1 btn-border-2" %> <br> <br>
+          <p class="text-right">Or new user ? <%= link_to "Sign up now!", signup_path %></p>
       <% end %>
   </main>
 </section>

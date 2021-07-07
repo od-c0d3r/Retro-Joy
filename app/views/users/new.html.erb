@@ -1,2 +1,12 @@
-<h1>Users#new</h1>
-<p>Find me in app/views/users/new.html.erb</p>
+<h1>New User</h1>
+<%= form_with model: @user do |f| %>
+      <%= render 'shared/error_messages', object: f.object %>
+      <%= f.label :name %>
+      <%= f.text_field :name, class: 'form-control' %> <br>
+      <%= f.label :username %>
+      <%= f.text_field :username, class: 'form-control' %> <br>
+      <%= f.label :email %>
+      <%= f.email_field :email, class: 'form-control' %> <br>
+      <%= f.submit "Create my account", class: "btn btn-primary" %>
+<% end %>
+<br><p>Or you can <%= link_to "login!", login_path %></p>
