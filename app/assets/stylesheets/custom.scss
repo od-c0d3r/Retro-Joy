@@ -5,3 +5,11 @@
 .main {
     text-align: center;
 }
+
+#error_explanation {
+    color: red;
+    ul {
+      color: red;
+      margin: 0 0 30px 0;
+    }
+}

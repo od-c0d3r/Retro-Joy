@@ -1,6 +1,16 @@
 <h1>Articles#new</h1>
 <p>Find me in app/views/articles/new.html.erb</p>
 
-<span class="image">
-    <%= f.file_field :image %>
-</span>
+<%= form_with(model: @article, local: true) do |f| %>
+    <%= render 'shared/error_messages', object: f.object %>
+    <%= f.label :title %>
+    <%= f.text_field :title, class: 'form-control' %>
+    <%= f.label :text %>
+    <%= f.text_area :text, class: 'form-control' %>
+    <%= f.label :category %> <br>
+    <%= f.collection_select :category_id, class: 'form-control' %> <br>
+    <%= f.label :image %>
+    <%= f.file_field :image, class: 'form-control'  %>
+
+    <%= f.submit "Post", class: "btn btn-primary" %>
+<% end %>
