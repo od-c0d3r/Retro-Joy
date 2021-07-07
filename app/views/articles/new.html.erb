@@ -8,7 +8,7 @@
     <%= f.label :text %>
     <%= f.text_area :text, class: 'form-control' %>
     <%= f.label :category %> <br>
-    <%= f.collection_select :category_id, class: 'form-control' %> <br>
+    <%= f.collection_select :category_id, Category.order(:name),:id,:name, include_blank: true, class: 'form-control' %> <br>
     <%= f.label :image %>
     <%= f.file_field :image, class: 'form-control'  %>
 

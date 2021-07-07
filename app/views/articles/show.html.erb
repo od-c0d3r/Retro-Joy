@@ -1,0 +1,9 @@
+<h1> Article Page</h1>
+
+<h3><%= @article.title %></h3>
+
+<%= image_tag url_for(@article.image), class:'art-img' if @article.image.attached? %>
+
+<p><%= @article.text %></p>
+
+<p>Categories: <%= @article.category.name %></p>
