@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  root   'application#main'
+  
   post   'votes/create'
   delete 'votes/destroy'
 
@@ -12,7 +14,7 @@ Rails.application.routes.draw do
   get    'users/edit'
   get    'users/update'
 
-  root   'application#index'
+
   
   get    '/login',   to: 'sessions#new'
   post   '/login',   to: 'sessions#create'

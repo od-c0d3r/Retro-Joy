@@ -1,9 +1,9 @@
 class ApplicationController < ActionController::Base
     include SessionsHelper
 
-    before_action :logged_in_user, only: :index
+    before_action :logged_in_user, only: :main
 
-    def index
+    def main
     end
 
     private
