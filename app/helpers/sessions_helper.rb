@@ -4,16 +4,11 @@ module SessionsHelper
     end
 
     def current_user
-        if session[:username]
-            @current_user ||= User.find_by(username: session[:username])
-        end
-    end
-
-    def current_user
         if (user_username = session[:username])
           user = User.find_by(username: user_username)
-          if user
-            @current_user = user
+            if user
+                @current_user = user
+            end
         end
     end
 
@@ -24,5 +19,9 @@ module SessionsHelper
     def log_out
         reset_session
         @current_user = nil
+    end
+
+    def store_location
+        session[:forwarding_url] = request.original_url if request.get?
     end
 end
