@@ -1,5 +1,6 @@
 class ArticlesController < ApplicationController
 
+  before_action :logged_in_user
 
   def new
     @article = Article.new
@@ -19,14 +20,15 @@ class ArticlesController < ApplicationController
   def show
     @article = Article.find(params[:id])
   end
+
+  private
+
+    def article_params
+      params.require(:article).permit(:title, :text, :image, :category_id)
+    end
+
+    def most_voted_arr(hash)
+      hash.max_by{|k,v| v}
+    end
 end
 
-private
-
-  def most_voted_arr(hash)
-    hash.max_by{|k,v| v}
-  end
-
-  def article_params
-    params.require(:article).permit(:title, :text, :image, :category_id)
-  end

@@ -7,18 +7,27 @@
                 <p><%= @most_voted_art.text %></p>
             </div>
         </div>
+        
         <div class="row">
-            <div class="col main-cat">
-            1 of 4
+            <div class="col-6 col-md-3 main-cat">
+                <div class="bg" style='background-image:url(<%= set_img_if_not_existed(@cat1_art) %>);'></div>
+                1 of 4 
+                <%= @cat1_art %>
             </div>
-            <div class="col main-cat">
-            2 of 4
+            <div class="col-6 col-md-3 main-cat">
+                <div class="bg" style='background-image:url(<%= set_img_if_not_existed(@cat1_art) %>);'></div>
+                2 of 4 
+                <%= @cat1_art %>
             </div>
-            <div class="col main-cat">
-            3 of 4
+            <div class="col-6 col-md-3 main-cat">
+                <div class="bg" style='background-image:url(<%= set_img_if_not_existed(@cat1_art) %>);'></div>
+                3 of 4
+                <%= @cat1_art %>
             </div>
-            <div class="col main-cat">
-            4 of 4
+            <div class="col-6 col-md-3 main-cat">
+                <div class="bg" style='background-image:url(<%= set_img_if_not_existed(@cat4_art) %>);'></div>
+                4 of 4
+                <%= @cat1_art %>
             </div>
         </div>
     </div>
