@@ -4,9 +4,10 @@
 
 body {
     a {
-        color: lightslategrey;
-        &:hover {
-            color: black;
+        text-decoration: none;
+        color: #847f7b;
+        &:hover,&:target {
+            color: #e75a15;
         }
     }
 }

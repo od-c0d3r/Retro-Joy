@@ -38,44 +38,10 @@
     -moz-transition: ease-out 0.5s;
 }
 
-// .button1.btn-border-2::after,
-// .button1.btn-border-2::before {
-//     position: absolute;
-//     content: "";
-//     width: 0;
-//     height: 0;
-//     transition: .5s;
-// }
-
-// .button1.btn-border-2::after {
-//     top: -3px;
-//     left: -3px;
-//     border-top: 3px solid transparent;
-//     border-left: 3px solid transparent;
-// }
-
-// .button1.btn-border-2::before {
-//     bottom: -3px;
-//     right: -3px;
-//     border-bottom: 3px solid transparent;
-//     border-right: 3px solid transparent;
-// }
-
 .button1.btn-border-2:hover {
     color: #222222;
 }
 
-// .button1.btn-border-2:hover::after,
-// .button1.btn-border-2:hover::before {
-//     width: calc(50% + 3px);
-//     height: calc(50% + 3px);
-//     border-color: #222222;
-// }
-
 .nav-logo {
-    width: 90px;
-}
-
-a {
-    text-decoration: none;
+    width: 80px;
 }

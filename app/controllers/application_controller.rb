@@ -16,7 +16,7 @@ class ApplicationController < ActionController::Base
     def most_voted_art
       votes_hash = Vote.group(:article_id).count
       if most_voted_arr(votes_hash).nil?
-        id_votes = [30]
+        id_votes = [44]
       else
         id_votes = most_voted_arr(votes_hash)
       end
