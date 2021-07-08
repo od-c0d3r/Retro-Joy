@@ -1,19 +1,22 @@
       <header class="navbar navbar-fixed-top navbar-inverse bg-light">
         <div class="container">
-          <%= link_to image_tag("logo-trans.png", class: 'mb4 logo nav-logo'),  root_path%>
+          <span>
+            <%= link_to image_tag("logo-trans.png", class: 'mb4 logo nav-logo'),  root_path%>
+            <%= current_user.name %>
+          </span>
           <nav>
             <ul class="nav navbar-nav navbar-right flex-row">
-              <li><%= link_to "BUSINESS",      categories_show_path(id:1), class: 'p-3' %></li>
-              <li><%= link_to "SPORTS",        categories_show_path(id:2), class: 'p-3' %></li>
-              <li><%= link_to "FASHION",       categories_show_path(id:3), class: 'p-3' %></li>
-              <li><%= link_to "ENTERTAINMENT", categories_show_path(id:4), class: 'p-3' %></li>
+              <li><%= link_to "BUSINESS",      categories_show_path(id:1), class: 'p-3 d-none d-lg-block' %></li>
+              <li><%= link_to "SPORTS",        categories_show_path(id:2), class: 'p-3 d-none d-lg-block' %></li>
+              <li><%= link_to "FASHION",       categories_show_path(id:3), class: 'p-3 d-none d-lg-block' %></li>
+              <li><%= link_to "ENTERTAINMENT", categories_show_path(id:4), class: 'p-3 d-none d-lg-block' %></li>
             </ul>
           </nav>
           <nav>
-            <ul class="nav navbar-nav navbar-right flex-row">
-              <li><%= link_to "HOME",        root_path, class: 'p-3' %></li>
-              <li><%= link_to "NEW ARTICLE", new_article_path , class: 'p-3' %></li>
-              <li><%= link_to "LOGOUT",      logout_path, method: :delete %></li>
+            <ul class="nav navbar-nav navbar-right flex-sm-row">
+              <li><%= link_to "HOME",        root_path,                    class: 'p-3' %></li>
+              <li><%= link_to "NEW ARTICLE", new_article_path ,            class: 'p-3' %></li>
+              <li><%= link_to "LOGOUT",      logout_path, method: :delete, class: 'p-3' %></li>
             </ul>
           </nav>
         </div>

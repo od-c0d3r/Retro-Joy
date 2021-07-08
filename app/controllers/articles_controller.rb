@@ -23,6 +23,10 @@ end
 
 private
 
-def article_params
-  params.require(:article).permit(:title, :text, :image, :category_id)
-end
+  def most_voted_arr(hash)
+    hash.max_by{|k,v| v}
+  end
+
+  def article_params
+    params.require(:article).permit(:title, :text, :image, :category_id)
+  end

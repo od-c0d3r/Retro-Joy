@@ -1,8 +1,26 @@
-<% if !logged_in? %>
-    <%= link_to "Login", login_path %></p>
-<% else %>
-    <main class="main">
-        <h1>Homepage</h1>
-        Welcome, <%= current_user.name %> <br><br>
-    </main>
-<% end %>
+<main class="main">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col most-voted">
+                <p><%= @most_voted_art.title %></p>
+                <p><%= image_tag url_for(@most_voted_art.image), class:'art-img' if @most_voted_art.image.attached? %></p>
+                <p><%= @most_voted_art.text %></p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col main-cat">
+            1 of 4
+            </div>
+            <div class="col main-cat">
+            2 of 4
+            </div>
+            <div class="col main-cat">
+            3 of 4
+            </div>
+            <div class="col main-cat">
+            4 of 4
+            </div>
+        </div>
+    </div>
+</main>
+

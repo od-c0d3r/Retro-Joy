@@ -2,6 +2,15 @@
     margin-bottom: 0;
 }
 
+body {
+    a {
+        color: lightslategrey;
+        &:hover {
+            color: black;
+        }
+    }
+}
+
 .main {
     text-align: center;
 }
@@ -15,5 +24,14 @@
 }
 
 .art-img {
-    width: 50vw;
+    height: 50vh;
+}
+
+.most-voted {
+    background: yellow;
+}
+
+.main-cat {
+    background-color: lightsalmon;
+    border: 1px solid lightgrey;
 }
