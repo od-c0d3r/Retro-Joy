@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   get       '/signup',  to: 'users#new'
 
   resources :users,     only: %i[index create]
-  resources :category,  only: %i[show]
+  resources :categories,  only: %i[show]
   resources :articles,  only: %i[new show create]
   resources :votes,     only: %i[create destory]
 

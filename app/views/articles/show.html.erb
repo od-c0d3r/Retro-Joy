@@ -2,7 +2,7 @@
 
 <h3><%= @article.title %></h3>
 
-<%= image_tag url_for(@article.image), class:'art-img' if @article.image.attached? %>
+<%= image_tag set_img_if_not_existed(@article), class:'art-img'%>
 
 <p><%= @article.text %></p>
 

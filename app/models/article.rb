@@ -6,6 +6,12 @@ class Article < ApplicationRecord
                                             message:   "should be less than 5MB" }
 
     has_one_attached :image
+    before_save do
+        if self.image.attached?
+            ext = '.' + self.image.blob.filename.extension
+            self.image.blob.update(filename: "#{Time.now.to_i}" + ext)
+        end
+    end
 
     belongs_to :author, class_name: 'User'
     

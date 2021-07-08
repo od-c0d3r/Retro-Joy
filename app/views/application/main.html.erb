@@ -2,32 +2,32 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col most-voted">
-                <p><%= @most_voted_art.title %></p>
-                <p><%= image_tag url_for(@most_voted_art.image), class:'art-img' if @most_voted_art.image.attached? %></p>
-                <p><%= @most_voted_art.text %></p>
+                <div class="bg" style='background-image:url(<%= set_img_if_not_existed(@most_voted_art) %>);'></div>
+                <%= link_to @most_voted_art.category.name, @most_voted_art.category %> <br>
+                <%= @most_voted_art.title %>
             </div>
         </div>
         
         <div class="row">
             <div class="col-6 col-md-3 main-cat">
                 <div class="bg" style='background-image:url(<%= set_img_if_not_existed(@cat1_art) %>);'></div>
-                1 of 4 
-                <%= @cat1_art %>
+                <%= link_to @cat1_art.category.name, @cat1_art.category %> <br>
+                <%= @cat1_art.title %>
             </div>
             <div class="col-6 col-md-3 main-cat">
-                <div class="bg" style='background-image:url(<%= set_img_if_not_existed(@cat1_art) %>);'></div>
-                2 of 4 
-                <%= @cat1_art %>
+                <div class="bg" style='background-image:url(<%= set_img_if_not_existed(@cat2_art) %>);'></div>
+                <%= link_to @cat2_art.category.name, @cat2_art.category %> <br>
+                <%= @cat2_art.title %>
             </div>
             <div class="col-6 col-md-3 main-cat">
-                <div class="bg" style='background-image:url(<%= set_img_if_not_existed(@cat1_art) %>);'></div>
-                3 of 4
-                <%= @cat1_art %>
+                <div class="bg" style='background-image:url(<%= set_img_if_not_existed(@cat3_art) %>);'></div>
+                <%= link_to @cat3_art.category.name, @cat3_art.category %> <br>
+                <%= @cat3_art.title %>
             </div>
             <div class="col-6 col-md-3 main-cat">
                 <div class="bg" style='background-image:url(<%= set_img_if_not_existed(@cat4_art) %>);'></div>
-                4 of 4
-                <%= @cat1_art %>
+                <%= link_to @cat4_art.category.name, @cat4_art.category %> <br>
+                <%= @cat4_art.title %>
             </div>
         </div>
     </div>

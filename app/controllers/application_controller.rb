@@ -15,7 +15,11 @@ class ApplicationController < ActionController::Base
 
     def most_voted_art
       votes_hash = Vote.group(:article_id).count
-      id_votes = [0] || most_voted_arr(votes_hash)
+      if most_voted_arr(votes_hash).nil?
+        id_votes = [30]
+      else
+        id_votes = most_voted_arr(votes_hash)
+      end
       Article.find_by(id:id_votes[0]) || Article.first
     end
 
@@ -23,5 +27,9 @@ class ApplicationController < ActionController::Base
         unless logged_in?
           redirect_to login_url
         end
-      end
+    end
+
+    def most_voted_arr(hash)
+      hash.max_by{|k,v| v}
+    end
 end

@@ -8,7 +8,13 @@ class ArticlesController < ApplicationController
 
   def create
     @article = current_user.articles.build(article_params)
-    @article.image.attach(params[:article][:image])
+
+    if params[:article][:image].nil?
+      @article.image.attach = url_for('logo.png') 
+    else 
+      @article.image.attach(params[:article][:image])
+    end
+
     if @article.save
       flash.now[:success] = "Article created!"
       redirect_to article_path(@article.id)
@@ -25,10 +31,6 @@ class ArticlesController < ApplicationController
 
     def article_params
       params.require(:article).permit(:title, :text, :image, :category_id)
-    end
-
-    def most_voted_arr(hash)
-      hash.max_by{|k,v| v}
     end
 end
 

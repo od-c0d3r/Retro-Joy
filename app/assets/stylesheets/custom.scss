@@ -27,28 +27,31 @@ body {
     height: 50vh;
 }
 
-.most-voted {
-    background: yellow;
-}
-
 .main-cat {
     height: 250px;
+}
+
+.most-voted {
+    height: 50vh;
+}
+
+.main-cat, .most-voted {
     border: 1px solid lightgrey;
     position: relative;
     z-index: 1;
+}
 
-    .bg {
-        position: absolute;
-        z-index: -1;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        opacity: .4;
-        width: 100%;
-        height: 100%;
-        background-position: center;
-        background-size: cover;
-        background-repeat: no-repeat;
-    }
+.bg {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: .4;
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
