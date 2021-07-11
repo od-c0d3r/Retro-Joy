@@ -36,12 +36,12 @@ body {
     height: 70vh;
 }
 
-.main-cat, .most-voted {
+.main-cat, .most-voted, .cat-art {
     position: relative;
     z-index: 1;
 }
 
-.bg {
+.bg, .bg-cat, .bg-lines {
     position: absolute;
     z-index: -1;
     top: 0;
@@ -81,6 +81,10 @@ body {
     }
 }
 
+.cat-art {
+    flex:25vw;
+}
+
 .cat-name {
     position: absolute;
     margin-top: 8px;
@@ -99,3 +103,36 @@ body {
     font-size: larger;
     font-weight: bold;
 }
+
+.ele-size {
+    flex: 50%;
+    height: 50vh;
+}
+
+.ele-last-odd {
+    width: 50%;
+    height: 50vh;
+}
+
+.bg-cat {
+    opacity: 1;
+}
+
+.bg-lines {
+    opacity: 0.05;
+}
+
+.rel-c {
+
+}
+
+@media screen and (max-width: 992px) {
+    .ele-last-odd {
+        width: 100%
+    }
+
+    .ele-size {
+        flex: auto;
+    }
+  }
+  

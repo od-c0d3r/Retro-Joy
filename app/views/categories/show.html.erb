@@ -1,3 +1,32 @@
-<h1>Category Page</h1>
-
-<h3><%= @category.name %></h2>
+<section class="d-flex flex-column flex-lg-row flex-wrap">
+    <% flip = false %>
+    <% @cat_arts.each do |art| %>
+            <% if flip ^= true && @cat_arts.index(art)%2 == 0 %>
+                <article class="d-flex <%= even_arts?(@cat_arts,art)%>">
+                    <aside class="cat-art">
+                        <div class="bg-cat" style='background-image:url(<%= set_img_if_not_existed(art) %>);'></div>
+                        <div class="bg-lines" style='background-image:url(<%= asset_path("lines") %>);'></div>
+                    </aside>
+                    <aside class="cat-art">
+                        <div class="bg-lines" style='background-image:url(<%= asset_path("lines") %>);'></div>
+                        <div class="art-title">
+                            <%= art.title %>
+                        </div>
+                    </aside>
+                </article>
+            <% else %>
+                <article class="d-flex <%= even_arts?(@cat_arts,art)%>">
+                    <aside class="cat-art" style="flex:25vw;">
+                        <div class="bg-lines" style='background-image:url(<%= asset_path("lines") %>);'></div>
+                        <div class="art-title">
+                            <%= art.title %>
+                        </div>
+                    </aside>
+                    <aside class="cat-art">
+                        <div class="bg-cat" style='background-image:url(<%= set_img_if_not_existed(art) %>);'></div>
+                        <div class="bg-lines" style='background-image:url(<%= asset_path("lines") %>);'></div>
+                    </aside>
+                </article>
+            <% end %>
+    <% end %>
+</section>
