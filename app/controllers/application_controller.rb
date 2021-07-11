@@ -9,6 +9,7 @@ class ApplicationController < ActionController::Base
       @cat2_art = Category.second.articles.first
       @cat3_art = Category.third.articles.first
       @cat4_art = Category.fourth.articles.first
+      @categories = Category.all
     end
 
     private

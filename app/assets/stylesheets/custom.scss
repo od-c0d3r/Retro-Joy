@@ -13,7 +13,7 @@ body {
 }
 
 .main {
-    text-align: center;
+    // text-align: center;
 }
 
 #error_explanation {
@@ -33,11 +33,10 @@ body {
 }
 
 .most-voted {
-    height: 50vh;
+    height: 70vh;
 }
 
 .main-cat, .most-voted {
-    border: 1px solid lightgrey;
     position: relative;
     z-index: 1;
 }
@@ -55,4 +54,48 @@ body {
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+}
+
+.retro {
+    box-shadow: inset 43px -42px 185px 71px #000000;
+    -webkit-box-shadow: inset 36px -17px 107px 22px #000000;
+    background: -webkit-linear-gradient(top, rgba(255, 145, 0, 1.2) 0%, rgba(255, 230, 48, 0.2) 70%), -webkit-linear-gradient(20deg, rgba(255, 0, 0, 0.5) 0%, rgba(255, 0, 0, 0) 35%);
+    display: table;
+}
+
+.dark {
+    background-color: #000000;    
+    opacity: 0.2;
+}
+
+.most-title {
+    font-weight: bold;
+    font-size: 2em;
+    color: #b93e00;
+    position: absolute;
+    bottom: 10px;
+    .most-text {
+        font-weight: bold;
+        font-size:0.6em;
+        color:black;
+    }
+}
+
+.cat-name {
+    position: absolute;
+    margin-top: 8px;
+    a {
+        color: white;
+        font-size: larger;
+        font-weight: bold;
+        border-bottom: solid 3px #F4ED11;
+        padding: 5px 5px;
+    }
+}
+
+.cat-title {
+    position: absolute;
+    bottom: 10px;
+    font-size: larger;
+    font-weight: bold;
 }
