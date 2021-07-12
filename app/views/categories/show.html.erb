@@ -21,15 +21,13 @@
                         <%= link_to  art.title, article_path(art) %>
                     </div>
                     <div class="art-text">
-                        <%=art.text[0,150]+'...'%>
+                        <%=art.text[0,100]+'...'%>
                     </div>
                     <div class="art-author">
                         Written by <%=art.author.name%>
                     </div>
-                    <div class="art-vote">
-                        <%= votes_counter(art) %>
-                    </div>
                     <div class="art-vote-hand">
+                        <%= votes_counter(art) %>
                         <%= like_dislike(art) %>
                     </div>
                 </aside>

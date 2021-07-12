@@ -16,6 +16,11 @@ header {
     font-family: 'Old Standard TT', serif;
 }
 
+footer {
+    position: absolute;
+    bottom: 0px;
+}
+
 #error_explanation {
     color: red;
     ul {
@@ -149,12 +154,6 @@ header {
 .art-author {
     position: absolute;
     bottom: 15px;
-}
-
-.art-vote {
-    position: absolute;
-    bottom: 15px;
-    right: 15px;
 }
 
 .art-vote-hand {

@@ -10,7 +10,6 @@ class UsersController < ApplicationController
       flash[:info] = "Welcome! Please signin"
       redirect_to root_url
     else
-      debugger
       render 'new'
     end
   end
