@@ -1,5 +1,5 @@
 user = User.create!(name:  "Omar R.",
-            username: 'omarrashad'
+            username: 'omarrashad',
             email: "example@railstutorial.org")
 
 Category.create(name:'Sport')
