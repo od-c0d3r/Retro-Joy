@@ -1,4 +1,5 @@
-<h1>New User</h1>
+<section class="d-flex flex-column justify-content-center align-items-center new-art">
+<%= image_tag "logo.png", class: 'mb4 logo' %>
 <%= form_with(model: @user, local: true) do |f| %>
       <%= render 'shared/error_messages', object: f.object %>
       <%= f.label :name %>
@@ -10,3 +11,4 @@
       <%= f.submit "Create my account", class: "btn btn-primary" %>
 <% end %>
 <br><p>Or you can <%= link_to "login!", login_path %></p>
+</section>
