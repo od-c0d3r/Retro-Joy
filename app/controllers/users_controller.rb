@@ -10,6 +10,7 @@ class UsersController < ApplicationController
       flash[:info] = "Welcome! Please signin"
       redirect_to root_url
     else
+      debugger
       render 'new'
     end
   end
@@ -19,5 +20,5 @@ end
 private
 
   def user_params
-    params.require(:user).permit(:name, :username)
+    params.require(:user).permit(:name, :username, :email)
   end

@@ -1,20 +1,19 @@
-<h1>Articles#new</h1>
-<p>Find me in app/views/articles/new.html.erb</p>
+<section class="d-flex flex-column justify-content-center align-items-center new-art">
+  <h1>New Article</h1>
+  <%= form_with(model: @article, local: true) do |f| %>
+      <%= render 'shared/error_messages', object: f.object %>
+      <%= f.label :title %>
+      <%= f.text_field :title, class: 'form-control' %> <br><br>
+      <%= f.label :text %>
+      <%= f.text_area :text, class: 'form-control' %> <br><br>
+      <%= f.label :category %>
+      <%= f.collection_select :category_id, Category.order(:name),:id,:name, include_blank: true, class: 'form-control' %> <br><br>
+      <%= f.label :image %>
+      <%= f.file_field :image, accept: "image/jpeg,image/gif,image/png", class: 'form-control'  %> <br><br>
 
-<%= form_with(model: @article, local: true) do |f| %>
-    <%= render 'shared/error_messages', object: f.object %>
-    <%= f.label :title %>
-    <%= f.text_field :title, class: 'form-control' %>
-    <%= f.label :text %>
-    <%= f.text_area :text, class: 'form-control' %>
-    <%= f.label :category %> <br>
-    <%= f.collection_select :category_id, Category.order(:name),:id,:name, include_blank: true, class: 'form-control' %> <br>
-    <%= f.label :image %>
-    <%= f.file_field :image, accept: "image/jpeg,image/gif,image/png", class: 'form-control'  %>
-
-    <%= f.submit "Post", class: "btn btn-primary" %>
-<% end %>
-
+      <%= f.submit "Post", class: "btn btn-primary btn-new" %>
+  <% end %>
+</section>
 <script type="text/javascript">
   $("#article_image").bind("change", function() {
     const size_in_megabytes = this.files[0].size/1024/1024;

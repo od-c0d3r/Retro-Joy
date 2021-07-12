@@ -1,32 +1,38 @@
 <section class="d-flex flex-column flex-lg-row flex-wrap">
-    <% flip = false %>
+    <% flip = true %>
+    <% reverse = 'flex-row-reverse' %>
     <% @cat_arts.each do |art| %>
             <% if flip ^= true && @cat_arts.index(art)%2 == 0 %>
-                <article class="d-flex <%= even_arts?(@cat_arts,art)%>">
-                    <aside class="cat-art">
-                        <div class="bg-cat" style='background-image:url(<%= set_img_if_not_existed(art) %>);'></div>
-                        <div class="bg-lines" style='background-image:url(<%= asset_path("lines") %>);'></div>
-                    </aside>
-                    <aside class="cat-art">
-                        <div class="bg-lines" style='background-image:url(<%= asset_path("lines") %>);'></div>
-                        <div class="art-title">
-                            <%= art.title %>
-                        </div>
-                    </aside>
-                </article>
+                <% reverse = 'flex-row-reverse' %>
             <% else %>
-                <article class="d-flex <%= even_arts?(@cat_arts,art)%>">
-                    <aside class="cat-art" style="flex:25vw;">
-                        <div class="bg-lines" style='background-image:url(<%= asset_path("lines") %>);'></div>
-                        <div class="art-title">
-                            <%= art.title %>
-                        </div>
-                    </aside>
-                    <aside class="cat-art">
-                        <div class="bg-cat" style='background-image:url(<%= set_img_if_not_existed(art) %>);'></div>
-                        <div class="bg-lines" style='background-image:url(<%= asset_path("lines") %>);'></div>
-                    </aside>
-                </article>
+                <% reverse = '' %>
             <% end %>
+            <article class="d-flex <%= reverse %> <%= even_arts?(@cat_arts,art)%>">
+                <aside class="cat-art">
+                    <div class="bg-cat" style='background-image:url(<%= set_img_if_not_existed(art) %>);'></div>
+                    <div class="bg-lines" style='background-image:url(<%= asset_path("lines") %>);'></div>
+                </aside>
+                <aside class="cat-art">
+                    <div class="bg-lines" style='background-image:url(<%= asset_path("lines") %>);'></div>
+                    <div class="art-cat">
+                        <%= art.category.name %>
+                    </div>
+                    <div class="art-title">
+                        <%= link_to  art.title, article_path(art) %>
+                    </div>
+                    <div class="art-text">
+                        <%=art.text[0,150]+'...'%>
+                    </div>
+                    <div class="art-author">
+                        Written by <%=art.author.name%>
+                    </div>
+                    <div class="art-vote">
+                        <%= votes_counter(art) %>
+                    </div>
+                    <div class="art-vote-hand">
+                        <%= like_dislike(art) %>
+                    </div>
+                </aside>
+            </article>
     <% end %>
 </section>

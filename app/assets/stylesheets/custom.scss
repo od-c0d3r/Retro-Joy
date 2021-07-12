@@ -12,8 +12,8 @@ body {
     }
 }
 
-.main {
-    // text-align: center;
+header {
+    font-family: 'Old Standard TT', serif;
 }
 
 #error_explanation {
@@ -83,6 +83,7 @@ body {
 
 .cat-art {
     flex:25vw;
+    padding: 15px;
 }
 
 .cat-name {
@@ -102,6 +103,9 @@ body {
     bottom: 10px;
     font-size: larger;
     font-weight: bold;
+    a {
+        color:whitesmoke
+    }
 }
 
 .ele-size {
@@ -122,9 +126,66 @@ body {
     opacity: 0.05;
 }
 
-.rel-c {
-
+.art-cat,.art-title {
+    display: inline-block;
+    color: #f09b0f;
+    border-bottom: 2px solid #f09b0f;
+    font-family: 'Abril Fatface', cursive;
+    font-size: larger;
+    padding: 0 5px;
 }
+
+.art-title {
+    margin: 20px 0;
+    color: black;
+    border: none;
+    display: block;
+}
+
+.art-text {
+    margin-bottom: 20px;
+}
+
+.art-author {
+    position: absolute;
+    bottom: 15px;
+}
+
+.art-vote {
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+}
+
+.art-vote-hand {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+}
+
+.new-art {
+    padding: 50px 0;
+    h1{
+        margin-bottom: 50px;
+    }
+    .btn-new{
+        padding: 0px 150px;
+    }
+}
+
+.art-page {
+    h1 {
+        margin-top: 20px;
+    }
+    img {
+        margin: 20px 0px;
+    }
+    .art-page-text {
+        font-family: 'Libre Baskerville', serif;
+    }
+}
+
+
 
 @media screen and (max-width: 992px) {
     .ele-last-odd {
