@@ -7,6 +7,7 @@ ruby '3.0.1'
 gem 'rails', '~> 6.1.3', '>= 6.1.3.2'
 # Use postgresql as the database for Active Record
 gem 'pg', '~> 1.1'
+gem 'rexml'
 # Use Puma as the app server
 gem 'bootstrap-sass',             '3.4.1'
 gem 'puma', '~> 5.0'
@@ -20,6 +21,7 @@ gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.7'
 # Use Redis adapter to run Action Cable in production
+gem 'rails-controller-testing'
 # gem 'redis', '~> 4.0'
 # Use Active Model has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
@@ -56,3 +58,4 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+gem "rspec-rails", group: [:development, :test]

@@ -169,7 +169,15 @@ header {
         margin-bottom: 50px;
     }
     .btn-new{
-        padding: 0px 150px;
+        padding: 10px 150px;
+        background-color: white;
+        border-color: #e75a15;
+        color: black;
+        &:hover {
+            background-color: #e75a15;
+            border-color: white;
+            color: white;
+        }
     }
 }
 
