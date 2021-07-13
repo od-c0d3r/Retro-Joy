@@ -1,3 +1,8 @@
+Category.destroy_all
+ActiveRecord::Base.connection.execute("TRUNCATE #{Category.table_name} RESTART IDENTITY")
+User.destroy_all
+ActiveRecord::Base.connection.execute("TRUNCATE #{User.table_name} RESTART IDENTITY")
+
 Category.create!([
     {name: "Business", priority: nil},
     {name: "Sports", priority: nil},
@@ -5,7 +10,7 @@ Category.create!([
     {name: "Entertainment", priority: nil}
   ])
 User.create!([
-  {name: "Omar", username: "omarrashad1", email: "omar@r1ashad1.com", categories: nil},
+  {name: "Omar", username: "omarrashad", email: "omar@r1ashad1.com", categories: nil},
   {name: "Bella", username: "bellaswan2", email: "omar@ra2shad2.com", categories: nil},
   {name: "Gotem", username: "gotemall3", email: "omar@ras3had3.com", categories: nil},
   {name: "Tanzila", username: "tantan4", email: "omar@ras4had4.com", categories: nil},
