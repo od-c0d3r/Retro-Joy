@@ -36,7 +36,8 @@ Follow these steps to get a local copy up and running :
 1. On terminal Type `cd Retro-Joy`
 1. Run `bundle install` to install all gems required if it isn't exist
 1. Run `rails db:migrate` to migrate the database
-1. Run `rails server` to serve the website on your localhost.
+1. Run `rails db:seed` to seed the database
+3. Run `rails server` to serve the website on your localhost.
 
 - For testing :
     - Run RSpec tests in terminal with `rspec` in the repository root.
