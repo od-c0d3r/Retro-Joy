@@ -10,7 +10,7 @@
             <article class="d-flex <%= reverse %> <%= even_arts?(@cat_arts,art)%>">
                 <aside class="cat-art">
                     <div class="bg-cat" style='background-image:url(<%= set_img_if_not_existed(art) %>);'></div>
-                    <div class="bg-lines" style='background-image:url(<%= asset_path("lines") %>);'></div>
+                    <div class="bg-lines" style='background-image:url(<%= asset_path("lines.png") %>);'></div>
                 </aside>
                 <aside class="cat-art">
                     <div class="bg-lines" style='background-image:url(<%= asset_path("lines") %>);'></div>
