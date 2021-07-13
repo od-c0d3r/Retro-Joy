@@ -9,13 +9,13 @@ Category.create!([
 ])
 
 users = User.create!([
-  {name: "Omar",    username: "omarrashad", email: "omar@r1ashad1.com", categories: nil},
-  {name: "Bella",   username: "bellaswan2", email: "omar@ra2shad2.com", categories: nil},
-  {name: "Jean",   username: "gotemall3",  email: "omar@ras3had3.com", categories: nil},
-  {name: "Tanzila", username: "tantan4",    email: "omar@ras4had4.com", categories: nil},
-  {name: "Depaak",  username: "samsa5",     email: "samrood@sam5.com", categories: nil},
-  {name: "Samrood", username: "samsam6",    email: "samroooooo6oood@gmail.com", categories: nil},
-  {name: "Leon",    username: "jaja2", email: "j2ean@j.com", categories: nil}
+  {name: "Omar",    username: "omarrashad1", email: "omar@r11ashad1.com", categories: nil},
+  {name: "Bella",   username: "bellaswan22", email: "omar@ra22shad2.com", categories: nil},
+  {name: "Jean",   username: "gotemall333",  email: "omar@ras33had3.com", categories: nil},
+  {name: "Tanzila", username: "tantan444",    email: "omar@ras44had4.com", categories: nil},
+  {name: "Depaak",  username: "samsa565",     email: "samrood5@5sam5.com", categories: nil},
+  {name: "Samrood", username: "samsam667",    email: "samr6oooooo6oood@gmail.com", categories: nil},
+  {name: "Leon",    username: "jaja287", email: "j2ean7@j.com", categories: nil}
 ])
 
 Article.create!([
