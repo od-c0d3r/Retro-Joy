@@ -10,7 +10,7 @@ Hit That ⭐️ if you like it ! <br>
 
 ## 📺 Live Demo 
 
-- [Retro Joy](https://repl.it/@OmarRashad/Ibn-Hayyan-Data-Miner)
+- [Retro Joy](https://stunning-kings-canyon-35023.herokuapp.com/)
 
 ## 📡 Technologies used :
 
