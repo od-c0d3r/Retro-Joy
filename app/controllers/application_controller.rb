@@ -5,11 +5,8 @@ class ApplicationController < ActionController::Base
 
     def main
       @most_voted_art = most_voted_art
-      @cat1_art = Category.first.articles.first
-      @cat2_art = Category.second.articles.first
-      @cat3_art = Category.third.articles.first
-      @cat4_art = Category.fourth.articles.first
-      @categories = Category.all
+      # @categories = Category.all
+      @categories = Category.includes(:articles)
     end
 
     private
