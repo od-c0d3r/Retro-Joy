@@ -7,6 +7,7 @@ ruby '3.0.1'
 gem 'rails', '~> 6.1.3', '>= 6.1.3.2'
 # Use postgresql as the database for Active Record
 gem 'pg', '~> 1.1'
+gem 'seed_dump'
 gem 'rexml'
 gem 'faker', :git => 'https://github.com/faker-ruby/faker.git', :branch => 'master'
 # Use Puma as the app server
