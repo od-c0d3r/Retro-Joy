@@ -5,13 +5,13 @@ Category.create!([
     {name: "Entertainment", priority: nil}
   ])
 User.create!([
-  {name: "Omar", username: "omarrashad", email: "omar@r1ashad.com", categories: nil},
-  {name: "Bella", username: "bellaswan", email: "omar@ra2shad.com", categories: nil},
-  {name: "Gotem", username: "gotemall", email: "omar@ras3had.com", categories: nil},
-  {name: "Tanzila", username: "tantan", email: "omar@ras4had.com", categories: nil},
-  {name: "Depaak", username: "samsa", email: "samrood@sam.com", categories: nil},
-  {name: "Samrood", username: "samsam", email: "samroooooooood@gmail.com", categories: nil},
-  {name: "Leon", username: "jaja", email: "jean@j.com", categories: nil}
+  {name: "Omar", username: "omarrashad1", email: "omar@r1ashad1.com", categories: nil},
+  {name: "Bella", username: "bellaswan2", email: "omar@ra2shad2.com", categories: nil},
+  {name: "Gotem", username: "gotemall3", email: "omar@ras3had3.com", categories: nil},
+  {name: "Tanzila", username: "tantan4", email: "omar@ras4had4.com", categories: nil},
+  {name: "Depaak", username: "samsa5", email: "samrood@sam5.com", categories: nil},
+  {name: "Samrood", username: "samsam6", email: "samroooooo6oood@gmail.com", categories: nil},
+  {name: "Leon", username: "jaja2", email: "j2ean@j.com", categories: nil}
 ])
 Article.create!([
   {author_id: 1, title: "This is my title", text: "this is my text", category_id: 1},
