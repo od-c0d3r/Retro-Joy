@@ -1,6 +1,5 @@
 Category.destroy_all
 ActiveRecord::Base.connection.execute("TRUNCATE #{Category.table_name} RESTART IDENTITY")
-User.destroy_all
 
 Category.create!([
   {name: "Business", priority: nil},
