@@ -6,8 +6,6 @@ Hit That ⭐️ if you like it ! <br>
 
  _A Ruby on Rails capstone based on Retro lifestyle articles website.._
 
-<img src="screenshot.gif" align="right" width="40%">
-
 ## 📺 Live Demo 
 
 - [Retro Joy](https://stunning-kings-canyon-35023.herokuapp.com/)
