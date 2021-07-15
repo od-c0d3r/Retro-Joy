@@ -1,61 +1,67 @@
 
-.art-cat,.art-title {
-    display: inline-block;
-    color: #f09b0f;
-    border-bottom: 2px solid #f09b0f;
-    font-family: 'Abril Fatface', cursive;
-    font-size: larger;
-    padding: 0 5px;
+.art-cat,
+.art-title {
+  display: inline-block;
+  color: #f09b0f;
+  border-bottom: 2px solid #f09b0f;
+  font-family: 'Abril Fatface', cursive;
+  font-size: larger;
+  padding: 0 5px;
 }
 
 .art-title {
-    margin: 20px 0;
-    color: black;
-    border: none;
-    display: block;
+  margin: 20px 0;
+  color: black;
+  border: none;
+  display: block;
 }
 
 .art-text {
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 .art-author {
-    position: absolute;
-    bottom: 15px;
+  position: absolute;
+  bottom: 15px;
 }
 
 .art-vote-hand {
-    position: absolute;
-    top: 15px;
-    right: 15px;
+  position: absolute;
+  top: 15px;
+  right: 15px;
 }
 
 .new-art {
-    padding: 50px 0;
-    h1{
-        margin-bottom: 50px;
+  padding: 50px 0;
+
+  h1 {
+    margin-bottom: 50px;
+  }
+
+  .btn-new {
+    padding: 10px 150px;
+    background-color: white;
+    border-color: #e75a15;
+    color: black;
+
+    &:hover {
+      background-color: #e75a15;
+      border-color: white;
+      color: white;
     }
-    .btn-new{
-        padding: 10px 150px;
-        background-color: white;
-        border-color: #e75a15;
-        color: black;
-        &:hover {
-            background-color: #e75a15;
-            border-color: white;
-            color: white;
-        }
-    }
+  }
 }
 
 .art-page {
-    h1 {
-        margin-top: 20px;
-    }
-    img {
-        margin: 20px 0px;
-    }
-    .art-page-text {
-        font-family: 'Libre Baskerville', serif;
-    }
+  h1 {
+    margin-top: 20px;
+  }
+
+  img {
+    margin: 20px 0;
+  }
+
+  .art-page-text {
+    font-family: 'Libre Baskerville', serif;
+  }
 }

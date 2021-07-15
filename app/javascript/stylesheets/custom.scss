@@ -1,11 +1,11 @@
 @import "bootstrap";
 
 .sign-in {
-    display: flex;
-    align-items: center;
-    padding-top: 40px;
-    padding-bottom: 40px;
-    height: 100vh;
+  display: flex;
+  align-items: center;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  height: 100vh;
 }
 
 .form-signin {
@@ -20,28 +20,28 @@
 }
 
 .logo {
-    width: 200px;
+  width: 200px;
 }
 
 .text-right {
-    text-align: left;
+  text-align: left;
 }
 
 .button1 {
-    padding: 12px 27px;
-    font-size: 16px;
-    color: #999999;
-    border: 3px solid #999999;
-    cursor: pointer;
-    transition: ease-out 0.5s;
-    -webkit-transition: ease-out 0.5s;
-    -moz-transition: ease-out 0.5s;
+  padding: 12px 27px;
+  font-size: 16px;
+  color: #999;
+  border: 3px solid #999;
+  cursor: pointer;
+  transition: ease-out 0.5s;
+  -webkit-transition: ease-out 0.5s;
+  -moz-transition: ease-out 0.5s;
 }
 
 .button1.btn-border-2:hover {
-    color: #222222;
+  color: #222;
 }
 
 .nav-logo {
-    width: 80px;
+  width: 80px;
 }

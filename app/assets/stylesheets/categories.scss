@@ -1,54 +1,57 @@
 
 .cat-art {
-    flex:25vw;
-    padding: 15px;
+  flex: 25vw;
+  padding: 15px;
 }
 
 .cat-name {
-    position: absolute;
-    margin-top: 8px;
-    a {
-        color: white;
-        font-size: larger;
-        font-weight: bold;
-        border-bottom: solid 3px #F4ED11;
-        padding: 5px 5px;
-    }
+  position: absolute;
+  margin-top: 8px;
+
+  a {
+    color: white;
+    font-size: larger;
+    font-weight: bold;
+    border-bottom: solid 3px #f4ed11;
+    padding: 5px 5px;
+  }
 }
 
 .cat-title {
-    position: absolute;
-    bottom: 10px;
-    font-size: larger;
-    font-weight: bold;
-    a {
-        color:whitesmoke
-    }
+  position: absolute;
+  bottom: 10px;
+  font-size: larger;
+  font-weight: bold;
+
+  a {
+    color: whitesmoke;
+  }
 }
 
 .ele-size {
-    flex: 50%;
-    height: 50vh;
+  flex: 50%;
+  height: 50vh;
 }
 
 .ele-last-odd {
-    width: 50%;
-    height: 50vh;
+  width: 50%;
+  height: 50vh;
 }
 
 .bg-cat {
-    opacity: 1;
+  opacity: 1;
 }
 
 .bg-lines {
-    opacity: 0.05;
+  opacity: 0.05;
 }
 
-.art-cat,.art-title {
-    display: inline-block;
-    color: #f09b0f;
-    border-bottom: 2px solid #f09b0f;
-    font-family: 'Abril Fatface', cursive;
-    font-size: larger;
-    padding: 0 5px;
+.art-cat,
+.art-title {
+  display: inline-block;
+  color: #f09b0f;
+  border-bottom: 2px solid #f09b0f;
+  font-family: 'Abril Fatface', cursive;
+  font-size: larger;
+  padding: 0 5px;
 }
