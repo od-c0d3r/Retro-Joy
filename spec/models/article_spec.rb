@@ -12,4 +12,11 @@ RSpec.describe Article, type: :model do
     Article.create!(author_id: user.id, title: 'usertest', text: 'test@test.com', category_id: Category.first.id)
     expect(Article.count).to eq 1
   end
+
+  describe Article do
+    it "should belongs to an author" do
+      t = Article.reflect_on_association(:author)
+      expect(t.macro).to eq(:belongs_to)
+    end
+  end
 end

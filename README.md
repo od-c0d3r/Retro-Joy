@@ -30,11 +30,12 @@ Open the Live code link or follow `Development` section for acquiring a local co
 
 Follow these steps to get a local copy up and running :
 
-1. On terminal Type `git clone https://github.com/od-c0d3r/Retro-Joy`
-1. On terminal Type `cd Retro-Joy`
-1. Run `bundle install` to install all gems required if it isn't exist
-1. Run `rails db:migrate` to migrate the database
-1. Run `rails db:seed` to seed the database
+1. On terminal Type `git clone https://github.com/od-c0d3r/Retro-Joy`.
+1. On terminal Type `cd Retro-Joy`.
+1. Run `bundle install` to install all gems required if it isn't exist.
+1. Run `npm install` to install the dependencies.
+1. Run `rails db:migrate` to migrate the database.
+1. Run `rails db:seed` to seed the database.
 3. Run `rails server` to serve the website on your localhost.
 
 - For testing :
