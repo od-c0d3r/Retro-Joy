@@ -2,7 +2,7 @@
 	<div class="container-fluid">
 		<div class="row">
 			<div class="col most-voted">
-				<div class="bg" style='background-image:url(<%= set_img_if_not_existed(@most_voted_art) %>);'></div>
+				<div class="bg" style='background-image:url(<%= img_if_not_existed(@most_voted_art) %>);'></div>
 				<div class="bg retro"></div>
 				<span class="most-title">
 					<%= @most_voted_art.title%> <br>
@@ -13,7 +13,7 @@
 		<div class="row">
 			<% @categories.each do |cat| %>
 				<div class="col-6 col-md-3 main-cat">
-					<div class="bg" style='background-image:url(<%= set_img_if_not_existed(cat.articles.first) %>);'></div>
+					<div class="bg" style='background-image:url(<%= img_if_not_existed(cat.articles.first) %>);'></div>
 					<div class="bg retro"></div>
 					<span class="cat-name"> <%= link_to cat.name, cat %></span>
 					<span class='cat-title'> <%= link_to  cat.articles.first.title, article_path(cat.articles.first) %></span>

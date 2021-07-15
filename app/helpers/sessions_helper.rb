@@ -4,10 +4,9 @@ module SessionsHelper
   end
 
   def current_user
-    if (user_username = session[:username])
-      user = User.find_by(username: user_username)
-      @current_user = user if user
-    end
+    user_username = session[:username]
+    user = User.find_by(username: user_username)
+    @current_user = user if user
   end
 
   def logged_in?
