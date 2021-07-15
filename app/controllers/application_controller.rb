@@ -5,7 +5,6 @@ class ApplicationController < ActionController::Base
 
   def main
     @most_voted_art = most_voted_art
-    # @categories = Category.all
     @categories = Category.includes(:articles)
   end
 
