@@ -2,12 +2,14 @@
   <h1>New Article</h1>
   <%= form_with(model: @article, local: true) do |f| %>
       <%= render 'shared/error_messages', object: f.object %>
+      <div class="input-group">
+        <%= f.label :category, class:'input-group-text'%>
+        <%= f.collection_select :category_id, Category.order(:name),:id,:name, {:include_blank => 'Choose a Category'}, class:'form-select'%> 
+      </div> or <%= link_to  "Create a new Category", new_category_path %>  <br><br>
       <%= f.label :title %>
       <%= f.text_field :title, class: 'form-control' %> <br><br>
       <%= f.label :text %>
       <%= f.text_area :text, class: 'form-control' %> <br><br>
-      <%= f.label :category %>
-      <%= f.collection_select :category_id, Category.order(:name),:id,:name, include_blank: true, class: 'form-control' %> <br><br>
       <%= f.label :image %>
       <%= f.file_field :image, accept: "image/jpeg,image/gif,image/png", class: 'form-control'  %> <br><br>
 

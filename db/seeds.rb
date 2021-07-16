@@ -8,15 +8,7 @@ Category.create!([
   {name: "Entertainment", priority: nil}
 ])
 
-users = User.create!([
-  {name: "Omar",    username: "omarrasha1", email: "omar@ashad1.com", categories: nil},
-  {name: "Bella",   username: "bellaswa2", email: "omar@shad2.com", categories: nil},
-  {name: "Jean",    username: "gotemal3",  email: "omar@had3.com", categories: nil},
-  {name: "Tanzila", username: "tanta4",    email: "omar@4had4.com", categories: nil},
-  {name: "Depaak",  username: "sams5",     email: "samrood5@5m5.com", categories: nil},
-  {name: "Samrood", username: "sasa6",    email: "samr6oo6oood@gmail.com", categories: nil},
-  {name: "Leon",    username: "jajo7", email: "j2@j.com", categories: nil}
-])
+users = User.All
 
 Article.create!([
   {author_id: users[0].id, title: "This is my title", text: "this is my text", category_id: 1},
