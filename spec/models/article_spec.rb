@@ -14,17 +14,17 @@ RSpec.describe Article, type: :model do
   end
 
   describe Article do
-    it "should belongs to an author" do
+    it 'should belongs to an author' do
       t = Article.reflect_on_association(:author)
       expect(t.macro).to eq(:belongs_to)
     end
 
-    it "should have many votes" do
+    it 'should have many votes' do
       t = Article.reflect_on_association(:votes)
       expect(t.macro).to eq(:has_many)
     end
 
-    it "should belongs to a category" do
+    it 'should belongs to a category' do
       t = Article.reflect_on_association(:category)
       expect(t.macro).to eq(:belongs_to)
     end
@@ -34,10 +34,10 @@ RSpec.describe Article, type: :model do
       record = Article.new(author_id: user.id, title: 'usertest', text: 'test@test.com', category_id: Category.first.id)
       record.title = ''
       record.validate
-      expect(record.errors[:title]).to include("can't be blank") 
+      expect(record.errors[:title]).to include("can't be blank")
       record.title = 'Title exists'
       record.validate
-      expect(record.errors[:title]).to_not include("can't be blank") 
+      expect(record.errors[:title]).to_not include("can't be blank")
     end
   end
 end

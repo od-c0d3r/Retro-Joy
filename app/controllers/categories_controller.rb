@@ -12,8 +12,7 @@ class CategoriesController < ApplicationController
       render 'new'
     end
   end
-  
-  
+
   def show
     @category = Category.find(params[:id])
     @cat_arts = @category.articles
@@ -21,7 +20,7 @@ class CategoriesController < ApplicationController
 
   private
 
-    def category_params
-      params.require(:category).permit(:name)
-    end
+  def category_params
+    params.require(:category).permit(:name)
+  end
 end

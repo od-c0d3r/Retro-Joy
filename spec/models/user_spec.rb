@@ -13,12 +13,12 @@ RSpec.describe User, type: :model do
   end
 
   describe User do
-    it "should have many articles" do
+    it 'should have many articles' do
       t = User.reflect_on_association(:articles)
       expect(t.macro).to eq(:has_many)
     end
 
-    it "should have many articles" do
+    it 'should have many articles' do
       t = User.reflect_on_association(:votes)
       expect(t.macro).to eq(:has_many)
     end
@@ -26,13 +26,12 @@ RSpec.describe User, type: :model do
     it 'validates presence' do
       record = User.new(name: 'test', username: 'usertest')
       record.email = '' # invalid state
-      record.validate 
+      record.validate
       expect(record.errors[:email]).to include("can't be blank") # check for presence of error
 
       record.email = 'foo@bar.com' # valid state
-      record.validate 
+      record.validate
       expect(record.errors[:email]).to_not include("can't be blank") # check for absence of error
     end
   end
-
 end
