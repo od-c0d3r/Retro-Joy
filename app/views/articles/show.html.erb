@@ -1,0 +1,10 @@
+<section class="container art-page">
+    <h1><%= @article.title %></h1>
+
+    <%= image_tag img_if_not_existed(@article), class:'art-img'%>
+
+    <p class="art-page-text"><%= @article.text%></p>
+
+    <p>Categories: <%= @article.category.name %></p>
+
+</section>

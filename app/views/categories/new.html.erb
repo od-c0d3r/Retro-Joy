@@ -1,0 +1,9 @@
+<section class="d-flex flex-column justify-content-center align-items-center new-art">
+    <h1>New Category</h1>
+    <%= form_with(model: @category, local: true) do |f| %>
+        <%= render 'shared/error_messages', object: f.object %>
+        <%= f.label :name %>
+        <%= f.text_field :name, class: 'form-control' %> <br><br>
+        <%= f.submit "Create", class: "btn btn-primary btn-new btn-post" %>
+    <% end %>
+</section>

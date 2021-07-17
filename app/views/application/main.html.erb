@@ -1,0 +1,27 @@
+<main class="main">
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col most-voted">
+				<div class="bg" style='background-image:url(<%= img_if_not_existed(@most_voted_art) %>);'></div>
+				<div class="bg retro"></div>
+				<span class="most-title">
+					<%= @most_voted_art.title%> <br>
+					<span class="most-text"><%=@most_voted_art.text[0,250]+'...'%></span>
+				</span>
+			</div>
+		</div>
+		<div class="row">
+			<% @categories.each do |cat| %>
+				<% if cat.articles.empty? %>
+				<% else %>
+					<div class="col-6 col-md-3 main-cat">
+						<div class="bg" style='background-image:url(<%= img_if_not_existed(cat.articles.first) %>);'></div>
+						<div class="bg retro"></div>
+						<span class="cat-name"> <%= link_to cat.name, cat %></span>
+						<span class='cat-title'> <%= link_to  cat.articles.first.title, article_path(cat.articles.first) %></span>
+					</div>
+				<% end %>
+			<% end %>
+		</div>
+	</div>
+</main>

@@ -1,0 +1,6 @@
+<div class="col-6 col-md-3 main-cat">
+    <div class="bg" style='background-image:url(<%= img_if_not_existed(category.articles.first) %>);'></div>
+    <div class="bg retro"></div>
+    <%= link_to category.articles.first, category.articles.first, class: 'cat_title' %> <br>
+    <%= category.articles.first.title %> <br>
+</div>

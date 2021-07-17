@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Retro Joy</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Old+Standard+TT&family=Pacifico&display=swap" rel="stylesheet">
+    <%= favicon_link_tag asset_path('logo.png') %>
+    
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+  <body>
+    <% flash.each do |message_type, message| %>
+        <div id="marg-zero" class="alert alert-<%= message_type %>"><%= message %></div>
+    <% end %>
+    <% if logged_in? %>
+      <%= render 'header' %>
+    <% end %>
+    <%= yield %>
+    <% if logged_in? %>
+      <%= render 'footer' %>
+    <% end %>
+  </body>
+</html>

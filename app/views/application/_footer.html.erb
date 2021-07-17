@@ -1,0 +1,11 @@
+<footer class="navbar navbar-fixed-top navbar-inverse bg-light">
+      <div class="container">
+        <%= link_to image_tag("logo-trans.png", class: 'mb4 logo nav-logo'),  root_path%>
+        <nav>
+          <ul class="nav navbar-nav navbar-right flex-row">
+            <li><%= link_to "HOME", root_path, class: 'p-3' %></li>
+            <li><%= link_to "LOGOUT", logout_path, method: :delete %></li>
+          </ul>
+        </nav>
+    </div>
+</footer>
